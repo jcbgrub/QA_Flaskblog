@@ -2,15 +2,9 @@
 {% block body_content %}
     <div class='form'>
         <form method='POST' action=''>
-<<<<<<< HEAD
            {{ form.hidden_tag() }}
             <div class="form-group">
 	{{ form.title.label }}
-=======
-            {{ form.hidden_tag() }}
-            <div class="form-group">
-            {{ form.title.label }}
->>>>>>> 64a8ae56ae5d6b7f309890284cd750db1176cb91
             {{ form.title }}
 	        {% if form.title.errors %}
               <!-- surround the displayed errors in a error div tag, this can then be styled later to be red etc. -->
