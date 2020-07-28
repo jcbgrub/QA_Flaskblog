@@ -2,9 +2,11 @@
 {% block body_content %}
     <div class='form'>
         <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+            <div class="form-group">
             {{ form.title.label }}
             {{ form.title }}
-	     {% if form.title.errors %}
+	        {% if form.title.errors %}
               <!-- surround the displayed errors in a error div tag, this can then be styled later to be red etc. -->
             <div class="error">
                 <!-- for each error in the errors for the first_name input field -->
