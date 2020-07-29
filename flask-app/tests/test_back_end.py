@@ -66,6 +66,8 @@ class TestPosts(TestBase):
         Test that when I add a new post, I am redirected to the homepage with the new post visible
         """
         with self.client:
+            client.post(url_for('login'), data=dict(email='jacob.hp.grub@gmail.com',password='root'),follow_redirects = TRUE)
+    
             response = self.client.post(
                 '/post',
                 data=dict(
