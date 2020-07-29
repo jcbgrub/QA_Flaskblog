@@ -100,7 +100,11 @@ def account_delete():
     user = current_user.id
     posts = Posts.query.filter_by(user_id=user)
     for post in posts:
+<<<<<<< HEAD
             db.session.delete(post)
+=======
+        db.session.delete(post)
+>>>>>>> 52dd75211d7df3ef5ce8b1e25048ef2d9c6e0b98
     account = Users.query.filter_by(id=user).first()
     logout_user()
     db.session.delete(account)
